@@ -20,7 +20,7 @@ pipeline{
                         def rtMaven = Artifactory.newMavenBuild()
                         //rtMaven.deployer server: server, releaseRepo: 'libs-release/', snapshotRepo: 'libs-snapshot/'
                         rtMaven.deployer server: server, releaseRepo: 'sagar/', snapshotRepo: 'sagar/'
-                        rtMaven.tool = 'maven'
+                        rtMaven.tool = 'Maven3'
                         rtMaven.run(pom: 'pom.xml', goals: 'clean install')
                     }
                 }
